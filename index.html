@@ -1,11 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello!</h1>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>Gary Alvaro | Portofolio</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Gary Alvaro">
+    <meta name="keywords" content="portfolio, portofolio, cv, profile, resume">
+    <meta name="author" content="Gary Alvaro">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/gary-logo.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/gary-logo.svg">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+    <link rel="shortcut icon" href="/assets/gary-logo.svg">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="/assets/vendor/boxicons/css/boxicons.min.css"/>
+    <link rel="stylesheet" media="screen" href="/assets/vendor/swiper/swiper-bundle.min.css"/>
+    
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="/assets/css/theme.min.css">
+
+    <!-- CSS Tambahan  -->
+    
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .dark-mode .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      .dark-mode .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      .dark-mode .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Theme mode -->
+    <script>
+      let mode = window.localStorage.getItem('mode'),
+          root = document.getElementsByTagName('html')[0];
+      if (mode !== null && mode === 'dark') {
+        root.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+      }
+    </script>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  </head>
+
+
+  <!-- Body -->
+  <body>
+    
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+
+
+      <!-- Navbar -->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+      <header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
+        <div class="container px-3">
+          <a href="" class="navbar-brand pe-3">
+            <img src="/assets/gary-logo.svg" width="48" alt="Gary Alvaro">
+            Gary Alvaro
+          </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a href="#exp" class="nav-link" data-scroll>Experiences</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#edu" class="nav-link" data-scroll>Education</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#cert" class="nav-link" data-scroll>Certifications</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#achv" class="nav-link" data-scroll>Achievements</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#proj" class="dropdown-item" data-scroll>Projects</a></li>
+                    <li><a href="#org" class="dropdown-item" data-scroll>Organization</a></li>
+                    <li><a href="#lang" class="dropdown-item" data-scroll>Languages</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="#ctc" class="nav-link" data-scroll>Contact Me</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- <div class="offcanvas-header border-top">
+              <a href="#" class="btn btn-primary w-100" target="_blank" rel="noopener">
+                Loginn
+              </a>
+            </div>       -->
+          </div>
+          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+            <input type="checkbox" class="form-check-input" id="theme-mode">
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+          </div>
+          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- <a href="" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" target="_blank" rel="noopener">
+            Login
+          </a> -->
+        </div>
+      </header>
+
+      <!-- Content -->
+      <h1>Hello!</h1>
+      
+
+    <!-- Footer -->
+    <footer class="footer dark-mode bg-dark pt-5 pb-4 pb-lg-5">
+      <!-- <div class="container pt-lg-4 text-center">
+        <p class="fs-xs">
+          &copy; 2023. Made by <b>Gary Alvaro</b>
+        </p>
+      </div> -->
+
+      <div class="container pt-4">
+        <div class="d-flex flex-sm-row flex-column align-items-center justify-content-between text-center text-md-start">
+          <p class="nav d-block fs-sm mb-sm-0 mb-4">
+            &copy; 2023. Made by <b>Gary Alvaro</b>
+          </p>
+          <div class="mt-n3 ms-n3">
+            <a href="https://instagram.com/gary_alvaro" class="btn btn-icon btn-secondary btn-facebook rounded-circle mt-3 ms-3" target="_blank">
+              <i class="bx bxl-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/garyalvaro/" class="btn btn-icon btn-secondary btn-instagram rounded-circle mt-3 ms-3" target="_blank">
+              <i class="bx bxl-linkedin"></i>
+            </a>
+            <a href="https://wa.me/6282369573355" class="btn btn-icon btn-secondary btn-twitter rounded-circle mt-3 ms-3" target="_blank">
+              <i class="bx bxl-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+
+    <!-- Vendor Scripts -->
+    <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    
+    <!-- Main Theme Script -->
+    <script src="/assets/js/theme.min.js"></script>
+
+    <!-- JS Tambahan -->
+    
+  </body>
 </html>
