@@ -23,7 +23,8 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Vendor Styles -->
-    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css"/>
+    <!-- <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css"/> -->
+    <link rel="stylesheet" media="screen" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"/>
     <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css"/>
     
     <!-- Main Theme Styles + Bootstrap -->
@@ -157,7 +158,7 @@
       <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
       <header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
         <div class="container px-3">
-          <a href="" class="navbar-brand pe-3">
+          <a href="#/" data-scroll class="navbar-brand pe-3">
             <img src="assets/gary-logo.svg" width="48" alt="Gary Alvaro">
             Gary Alvaro
           </a>
@@ -170,7 +171,7 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <!-- <li class="nav-item">
-                  <a href="#exp" class="nav-link" data-scroll>Experiences</a>
+                  <a href="#exp" class="nav-link" data-scroll>Home</a>
                 </li>
                 <li class="nav-item">
                   <a href="#edu" class="nav-link" data-scroll>Education</a>
@@ -180,26 +181,25 @@
                 </li>
                 <li class="nav-item">
                   <a href="#achv" class="nav-link" data-scroll>Achievements</a>
+                </li> -->
+                
+                <li class="nav-item">
+                  <a href="#/" data-scroll class="nav-link">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Portfolio</a>
                   <ul class="dropdown-menu">
-                    <li><a href="#proj" class="dropdown-item" data-scroll>Projects</a></li>
-                    <li><a href="#org" class="dropdown-item" data-scroll>Organization</a></li>
-                    <li><a href="#lang" class="dropdown-item" data-scroll>Languages</a></li>
+                    <li><a href="#/portfolio-tech" data-scroll class="dropdown-item">Tech / IT</a></li>
+                    <li><a href="#/portfolio-design" data-scroll class="dropdown-item">Design</a></li>
+                    <li><a href="#/portfolio-teaching" data-scroll class="dropdown-item">Teaching</a></li>
                   </ul>
-                </li> -->
+                </li>
                 <li class="nav-item">
-                  <a href="#ctc" class="nav-link" data-scroll>Contact Me</a>
+                  <a href="#/contact" data-scroll class="nav-link">Contact Me</a>
+                  <!-- <a href="#top" data-scroll class="nav-link" onclick="goToUrl('contact.html')">Contact Me</a> -->
                 </li>
               </ul>
             </div>
-
-            <!-- <div class="offcanvas-header border-top">
-              <a href="#" class="btn btn-primary w-100" target="_blank" rel="noopener">
-                Loginn
-              </a>
-            </div>       -->
           </div>
           <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
             <input type="checkbox" class="form-check-input" id="theme-mode">
@@ -209,9 +209,6 @@
           <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <!-- <a href="" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" target="_blank" rel="noopener">
-            Login
-          </a> -->
         </div>
       </header>
 
@@ -219,20 +216,14 @@
       <div id="content">
 
       </div>
-      
+    </main>
 
     <!-- Footer -->
     <footer class="footer dark-mode bg-dark pt-5 pb-4 pb-lg-5">
-      <!-- <div class="container pt-lg-4 text-center">
-        <p class="fs-xs">
-          &copy; 2023. Made by <b>Gary Alvaro</b>
-        </p>
-      </div> -->
-
       <div class="container pt-4">
         <div class="d-flex flex-sm-row flex-column align-items-center justify-content-between text-center text-md-start">
           <p class="nav d-block fs-sm mb-sm-0 mb-4">
-            &copy; 2023. Made by <b>Gary Alvaro</b>
+            &copy; 2024 <b>Gary Alvaro</b>
           </p>
           <div class="mt-n3 ms-n3">
             <a href="https://instagram.com/gary_alvaro" class="btn btn-icon btn-secondary btn-facebook rounded-circle mt-3 ms-3" target="_blank">
@@ -241,7 +232,7 @@
             <a href="https://www.linkedin.com/in/garyalvaro/" class="btn btn-icon btn-secondary btn-instagram rounded-circle mt-3 ms-3" target="_blank">
               <i class="bx bxl-linkedin"></i>
             </a>
-            <a href="https://wa.me/6282369573355" class="btn btn-icon btn-secondary btn-twitter rounded-circle mt-3 ms-3" target="_blank">
+            <a href="https://wa.me/6282369573355" class="btn btn-icon btn-secondary btn-whatsapp rounded-circle mt-3 ms-3" target="_blank">
               <i class="bx bxl-whatsapp"></i>
             </a>
           </div>
@@ -261,6 +252,7 @@
     <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     
     <!-- Main Theme Script -->
@@ -268,25 +260,72 @@
 
     <!-- JS Tambahan -->
     <script>
-        $(document).ready(function(){
-            $.ajax({
-                type: "GET",
-                url: "home.html",
-                data: { },
-                success: function(data){
-                    $('#content').html(data);
-                }
-            });
-            
-            $.ajax({
-                type: "GET",
-                url: "https://jsonplaceholder.typicode.com/todos",
-                data: { },
-                success: function(data){
-                    console.log(data);
-                }
-            });
-        });
+      // Routing
+      $(document).ready(function () {
+        const routes = {
+          "#/": "home.html",
+
+          "#/portfolio-tech": "portfolio-tech.html",
+          "#/portfolio-tech/ams": "portfolio-tech/ams.html",
+
+          "#/portfolio-design": "portfolio-design.html",
+          "#/portfolio-design/lab-terpadu-usu": "portfolio-design/lab-terpadu-usu.html",
+          "#/portfolio-design/teknik-sipil-usu": "portfolio-design/teknik-sipil-usu.html",
+
+          "#/portfolio-teaching": "portfolio-teaching.html",
+          
+          "#/contact": "contact.html"
+        };
+
+        function loadContent() {
+          const hash = window.location.hash || "#/";
+          const page = routes[hash] || "404.html";
+          $('#content').load(page, function () {
+            window.scrollTo(0, 0); // Scroll to top
+          });
+        }
+
+        // Load on initial page load
+        loadContent();
+
+        // Listen for hash changes
+        $(window).on('hashchange', loadContent);
+      });
+
+
+
+      // $(document).ready(function(){
+      //   let lastPage = localStorage.getItem('lastPage');
+      //   if (lastPage) {
+      //     console.log(lastPage);
+      //     goToUrl(lastPage);
+      //   } else {
+      //     goToUrl("home.html");
+      //   }
+
+        
+      //   // window.onbeforeunload = function(){
+      //   //     return "Message here";
+      //   // }
+        
+      // });
+
+      
+      // function goToUrl(path)
+      // {
+      //   $.ajax({
+      //       type: "GET",
+      //       url: path,
+      //       data: { },
+      //       success: function(data){
+      //           $("#content").html(data);
+      //           localStorage.setItem('lastPage', path);
+      //       }
+      //   });
+      // }
+
+      
+
     </script>
 
   </body>

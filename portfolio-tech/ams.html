@@ -1,0 +1,285 @@
+<!-- Breadcrumb -->
+<nav class="container py-4 mb-lg-2 mt-5" aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0 mt-4">
+        <li class="breadcrumb-item">
+            <a href="#/" data-scroll><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="#/portfolio-tech" data-scroll>Tech/IT Portfolio</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Asset Management System</li>
+    </ol>
+</nav>
+
+
+<!-- Page title -->
+<section class="container pb-4 mb-2 mb-lg-3">
+    <h1>Asset Management System</h1>
+    <p class="text-muted mb-0">ASP .NET MVC / C# / SQL Server / Bootstrap / JQuery</p>
+</section>
+
+
+<!-- Hero image (Parallax) -->
+<section class="jarallax" data-jarallax data-speed="0.4">
+    <div class="jarallax-img" style="background-image: url('assets/porto-tech/ams/ams-01.jpg');"></div>
+    <div class="d-none d-xxl-block" style="height: 800px;"></div>
+    <div class="d-none d-lg-block d-xxl-none" style="height: 600px;"></div>
+    <div class="d-none d-md-block d-lg-none" style="height: 450px;"></div>
+    <div class="d-md-none" style="height: 400px;"></div>
+</section>
+
+<!-- About project -->
+<section class="container py-5 my-1 my-md-4 my-lg-5">
+    <div class="row">
+        <div class="col-7">
+            <div class="pe-lg-4 me-lg-3 pe-xl-0 me-xl-0">
+                <h2 class="h1 mb-4">Overview</h2>
+                <p class="fs-lg mb-4">
+                    <b>The Asset Management System (AMS)</b> is a platform developed to support asset management needs for companies, hospitals, and their branches across various cities in Indonesia. The system covers key processes such as asset registration, transfer, decommissioning, maintenance, and other related operations.
+                </p>
+                <p class="fs-lg mb-0">
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-5 col-xl-4 offset-xl-1 border-start-lg">
+            <div class="ps-lg-4 ms-lg-3">
+                <h3 class="h5 d-flex align-items-center">
+                    <i class="bx bx-user text-primary fs-4 me-2"></i>Role
+                </h3>
+                <p class="pb-4 mb-0 mb-lg-3">Fullstack Developer</p>
+                <h3 class="h5 d-flex align-items-center">
+                    <i class="bx bx-bong text-primary fs-4 me-2"></i>Tech Stack
+                </h3>
+                <p class="mb-0">
+                    ASP.NET MVC (C#)<br>
+                    Microsoft SQL Server<br>
+                    Bootstrap <br>
+                    JQuery
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Details  -->
+<section class="container my-1 my-md-4 my-lg-5">
+    <div class="row mb-5">
+        <div class="col-12">
+            <h4>Background</h4>
+        </div>
+        <div class="col-12">
+            <p>
+                The system was initially developed in early 2021 and was officially handed over to me in mid-2023. At that time, users were experiencing several issues with the existing AMS, including critical bugs, decreased performance, and a confusing user interface. In addition, users required new features to better support their operational needs.
+            </p>
+            <p>
+                With approval from upper management, I was granted the authority to implement major changes in order to adapt the system to meet the expectations of new users, while preserving the existing workflow. By implementing the six steps of Software Development Life Cycle (SDLC), the development was completed in early 2024, and I continue to maintain the system by fixing bugs and adding minor features to enhance user efficiency.
+            </p>
+            
+        </div>
+    </div>
+    
+    <div class="row mb-5">
+        <div class="col-md-12">
+            <h4>Planning</h4>
+            <p>
+                The further development of The Asset Management System (AMS) was started after hospital management, in coordination with the board of directors, agreed to enhance AMS with new features to support hospital operations in asset management.
+            </p>
+            <p>
+                The system scope includes asset registration, asset usage tracking, asset transfers, asset write-offs, asset loans, maintenance management, various asset-related reports, and user account management. However, the AMS currently has limitations—it's not yet integrated with external systems such as purchasing or accounting and is only available in a web version.
+            </p>
+            <p>
+                The development team consisted of 2 full-stack developers, 1 system analyst, and 1 supervisor. I served as one of the full-stack developers.
+            </p>
+            <img src="assets/porto-tech/ams/ams-02A.jpg" alt="" class="rounded-3 mx-auto d-block" width="80%">
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-md-8">
+            <h4>Analysis</h4>
+            <p>
+                The previous version of AMS had access control limited to branch-level and lacked unit/room-level access, which made it insufficient for the hospital's operational needs at the unit level. Role-based access was also limited to menu-level access and did not extend to action-level permissions. The AMS also lacked essential input fields required by the ASPAK (Ministry of Health Asset Reporting System), and asset transfers could only be conducted by asset managers, not by asset owners.
+            </p>
+            <p>
+                The users involved in the system include:
+                <ul>
+                    <li>Admin: Asset managers with the highest level of authority.</li>
+                    <li>Accounting Operator: Users with authority at the branch/company level.</li>
+                    <li>Head of Unit: Users with authority at the room/unit level.</li>
+                    <li>User: Individuals responsible for managing assets assigned to them.</li>
+                    <li>Technician: Users responsible for addressing asset maintenance requests.</li>
+                    <li>Superadmin: IT team members who manage all user accounts.</li>
+                </ul>
+            </p>
+            <p>
+                To improve asset management at the unit level, the hospital leadership requested the following features:
+                <ul>
+                    <li>Room-level access rights</li>
+                    <li>Role-based access for unit heads</li>
+                    <li>Additional input fields required for ASPAK submissions</li>
+                    <li>Asset transfer requests, both inter-room and inter-hospital</li>
+                    <li>Asset write-off requests</li>
+                    <li>Approval workflows for asset transfer and write-off requests</li>
+                </ul>
+            </p>
+            <p>
+                Beyond these requested features, my teammate and I identified several process flaws in the existing system and outdated technology, which required updates. We also initiated the integration of the authentication system with the company's Single Sign-On, so users no longer need separate credentials for AMS.
+            </p>
+
+        </div>
+        <div class="col-md-4">
+            <img src="assets/porto-tech/ams/ams-03.jpg" alt="" class="rounded-3 mb-2" width="90%">
+            <img src="assets/porto-tech/ams/ams-04.jpg" alt="" class="rounded-3 mb-2" width="90%">
+            <img src="assets/porto-tech/ams/ams-05.jpg" alt="" class="rounded-3 mb-2" width="90%">
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-12">
+            <h4>Design</h4>
+            <p>
+                The system redesign began with discussions involving the team and the IT supervisor to review the requested features and identify existing issues. We then created new database tables to support the required functionality and analyzed existing code to understand system workflows—this was crucial due to the lack of documentation. For complex workflows, we developed flowcharts for better comprehension.
+            </p>
+            <p>
+                The well-designed interfaces from the old system were retained in terms of layout but updated with a modern UI template to align with other internal systems, ensuring a unified branding. Less user-friendly interfaces were redesigned for improved usability. Our design principles emphasized consistency, ease of use, and strong branding for AMS.
+            </p>
+        </div>
+        <div class="col-12">
+            <img src="assets/porto-tech/ams/ams-06A.png" alt="" class="rounded-3 mt-3">
+            <img src="assets/porto-tech/ams/ams-06B.png" alt="" class="rounded-3">
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-12">
+            <h4>Implementation</h4>
+            <p>
+                The system was built using the ASP .NET MVC framework with C# and integrated with Microsoft SQL Server. The front end used a premium Bootstrap 4 template with jQuery 3. Development tools included Visual Studio 2022, Visual Studio Code, Table Plus, and Figma.
+            </p>
+            <p>
+                Development was shared between two full-stack developers who divided tasks across modules and collaborated on code refactoring. My key contributions included:
+                <ul>
+                    <li>Developing system branding (e.g., logo, layout structure, icons, illustrations)</li>
+                    <li>Designing and creating database tables</li>
+                    <li>Writing stored procedures for complex queries</li>
+                    <li>Translating user requirements into CRUD functions, mostly accessible via REST APIs</li>
+                    <li>Refactoring code and queries for efficiency and preventing timeouts</li>
+                    <li>Adding detailed comments to complex code for easier maintenance</li>
+                    <li>Coordinating with the IT supervisor and system analyst to ensure alignment with user requirements</li>
+                </ul>
+            </p>
+
+
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-md-12">
+            <h4>Testing</h4>
+            <p>
+                Testing was conducted by the system analyst through periodic manual testing after each module was completed. Any reported bugs were immediately addressed by the developers. After internal testing was completed, a meeting was held with hospital leadership and asset managers to present the system. Feedback was mostly minor updates or additional features.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <img src="assets/porto-tech/ams/ams-08A.jpg" alt="" class="rounded-3 mb-2">
+        </div>
+        <div class="col-md-6">
+            <img src="assets/porto-tech/ams/ams-08B.png" alt="" class="rounded-3 mb-2">
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-12">
+            <h4>Deployment / Release</h4>
+            <p>
+                After completing all requested features and passing all tests, the updated AMS was officially launched in early 2024. Users were informed ahead of time to prepare for the system migration. The launch and migration proceeded smoothly. The system analyst provided training—both in person and virtually—to users across hospital branches and also prepared user documentation.
+            </p>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-12">
+            <h4>Maintenance</h4>
+            <p>
+                Ongoing maintenance continues, mainly addressing bug fixes, minor updates, and ensuring smooth user experience. In the future, AMS is planned to be rebuilt using a microservices architecture in Golang, integrated with the company's inventory / supply chain system to facilitate seamless conversion from procurement to asset registration.
+            </p> 
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-12">
+            <h4>Special Thanks</h4>
+            <p>
+                <a href="https://www.linkedin.com/in/julianna-chandra-77a205169/" target="_blank" style="text-decoration:none;"><b>Julianna Chandra</b></a>, 
+                Assistant Manager for the IT Team (formerly a Supervisor), is an outstanding leader who guides the team through every step of the SDLC and effectively solves a wide range of problems.
+            </p>
+            <p>
+                <a href="https://www.linkedin.com/in/serafina-salim/" target="_blank" style="text-decoration:none;"><b>Serafina Salim</b></a>, 
+                a supportive and collaborative partner in the AMS project, working as a full stack developer with strong motivation in backend development and excellent analytical thinking skills.
+            </p>
+            <p>
+                <b>Nanda Gozalio</b>, 
+                a nice partner serving as a system analyst in the AMS project, known for strong communication skills, as well as solid capabilities in testing and analysis.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+<!-- Explore More Projects  -->
+<section class="container py-5 mt-2 mt-md-4 mt-lg-5 mb-xl-2">
+    <!--
+    <h2 class="h1 text-center pt-2 pt-md-3 pb-4 mb-2 mb-lg-3">Explore More Projects</h2>
+
+    <div class="row">
+    <div class="col-md-4">
+        <div class="card card-portfolio">
+        <div class="card-img">
+            <img src="assets/porto-design/porto-design-labterpadu.jpg" alt="Image">
+        </div>
+        <div class="card-body">
+            <h3 class="h4 mb-2">
+            <a href="#/portfolio-tech/" data-scroll class="stretched-link">Lab Terpadu USU Brand Design</a>
+            </h3>
+            <div class="card-portfolio-meta">
+            <span class="text-muted">Brand Design / Social Media / Printing</span>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card card-portfolio">
+        <div class="card-img">
+            <img src="assets/porto-design/porto-design-arcard.jpg" alt="Image">
+        </div>
+        <div class="card-body">
+            <h3 class="h4 mb-2">
+            <a href="#/portfolio-tech/" data-scroll class="stretched-link">AR Card Techtonic Brand Design</a>
+            </h3>
+            <div class="card-portfolio-meta">
+            <span class="text-muted">Brand Design / Social Media / Printing</span>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card card-portfolio">
+        <div class="card-img">
+            <img src="assets/porto-design/porto-design-iccai.jpg" alt="Image">
+        </div>
+        <div class="card-body">
+            <h3 class="h4 mb-2">
+            <a href="#/portfolio-tech/" data-scroll class="stretched-link">ICCAI 2022 Brand Design</a>
+            </h3>
+            <div class="card-portfolio-meta">
+            <span class="text-muted">Brand Design / Flyer / Conference</span>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    </div> -->
+
+</section>
