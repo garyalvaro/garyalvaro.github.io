@@ -1,0 +1,339 @@
+<!-- Breadcrumb -->
+<nav class="container py-4 mb-lg-2 mt-5" aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0 mt-4">
+        <li class="breadcrumb-item">
+            <a href="#/" data-scroll><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="#/portfolio-tech" data-scroll>Tech/IT Portfolio</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">SuperInventory</li>
+    </ol>
+</nav>
+
+
+<!-- Page title -->
+<section class="container pb-4 mb-2 mb-lg-3">
+    <h1>SuperInventory (Supply Chain Management)</h1>
+    <p class="text-muted mb-0">Go / PostgreSQL / MongoDB / RESTful API / Google Cloud Platform (GCP)</p>
+</section>
+
+
+<!-- Hero image (Parallax) -->
+<section class="jarallax" data-jarallax data-speed="0.4">
+    <div class="jarallax-img" style="background-image: url('assets/porto-tech/superinventory/superinventory-01.jpg');"></div>
+    <div class="d-none d-xxl-block" style="height: 800px;"></div>
+    <div class="d-none d-lg-block d-xxl-none" style="height: 600px;"></div>
+    <div class="d-none d-md-block d-lg-none" style="height: 450px;"></div>
+    <div class="d-md-none" style="height: 400px;"></div>
+</section>
+
+<!-- About project -->
+<section class="container py-5 my-1 my-md-4 my-lg-5">
+    <div class="row">
+        <div class="col-lg-7">
+            <div class="pe-lg-4 me-lg-3 pe-xl-0 me-xl-0">
+                <h2 class="h1 mb-4">Overview</h2>
+                <p class="fs-lg mb-4">
+                    SuperInventory is a web-based internal system designed to streamline the company's supply chain and warehouse operations. Built as part of the company's long-term digital transformation roadmap, it consolidates multiple legacy systems into a single, scalable platform covering inventory tracking, purchasing, sales, distribution, and light manufacturing. The project focuses on improving data integrity, simplifying workflows, and enhancing system performance by adopting a microservices architecture. My role as a backend engineer involved developing robust APIs, optimizing data flow between services, and ensuring the platform could support diverse business operations across multiple subsidiaries.
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-5 col-xl-4 offset-xl-1 border-start-lg">
+            <div class="ps-lg-4 ms-lg-3">
+                <h3 class="h5 d-flex align-items-center">
+                    <i class="bx bx-user text-primary fs-4 me-2"></i>Role
+                </h3>
+                <p class="pb-4 mb-0 mb-lg-3">Backend Developer</p>
+                <h3 class="h5 d-flex align-items-center">
+                    <i class="bx bx-bong text-primary fs-4 me-2"></i>Tech Stack
+                </h3>
+                <p class="mb-0">
+                    Go<br>
+                    PostgreSQL<br>
+                    MongoDB <br>
+                    RESTful API <br>
+                    Google Cloud Platform (GCP)
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Details  -->
+<section class="container my-1 my-md-4 my-lg-5">   
+    <div class="row mb-5">
+        <div class="col-md-12">
+            <h4>Planning</h4>
+            <p>
+                The main objective of the SuperInventory system is to integrate multiple internal applications related to supply chain processes—including purchasing, stock logging, item issuing, sales, cashiering, shipping, and basic manufacturing. This centralized platform aims to improve data accuracy, streamline workflows, and support decision-making across business units.
+            </p>
+            <img src="assets/porto-tech/superinventory/superinventory-02.png" alt="[GAMBAR INTEGRASI SISTEM]" class="rounded-3 mx-auto d-block mb-5">
+        </div>
+        <div class="col-md-6">
+            <p>
+                System scope is limited to internal company use, covering the full distribution flow—from suppliers to warehouses, and from product usage to sales—while also supporting basic manufacturing operations. The system provides various stock-related reports and includes integration with the company's accounting system. However, the system does not support marketplace integration and is only available as a web-based application.
+            </p>
+            <p>
+                The project involves collaboration across multiple roles and departments, including:
+                <ul>
+                    <li>Assistant of Manager (formerly Supervisor)</li>
+                    <li>Assistant of Supervisor</li>
+                    <li>Backend developers</li>
+                    <li>Frontend developers</li>
+                    <li>UI/UX designer</li>
+                    <li>System analyst</li>
+                    <li>End users from multiple subsidiaries, each with distinct operational workflows</li>
+                </ul>
+            </p>
+        </div>
+        <div class="col-md-6">
+            <img src="assets/porto-tech/superinventory/superinventory-03.png" alt="[GAMBAR STRUKTUR TEAM]" class="rounded-3 mx-auto d-block my-3">
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-12">
+            <h4>Analysis</h4>
+            <p>
+                The previous system relied on outdated technologies and was deployed on a monolithic architecture hosted on on-premise servers. It was fragmented into multiple standalone applications, which led to operational inefficiencies, including data duplication, especially in product registrations, and inconsistent user experiences due to an interface that was not fully user-friendly.
+            </p>
+            <p>
+                The core requirements for the new backend system included:
+                <ul>
+                    <li>Migrating from on-premise to cloud infrastructure to ensure scalability, reliability, and easier deployment.
+                    <li>Rebuilding the system using a microservice architecture, allowing for modular development, better fault isolation, and improved maintainability.</li>
+                    <li>Designing a more unified and flexible database schema capable of supporting the diverse needs of supply chain operations, including purchasing, warehouse management, production, and distribution.</li></li>
+                </ul>
+            </p>
+            <p>
+                The system requirements were gathered through an in-depth review of legacy features and functionalities, supplemented by multiple meetings with end users across departments to understand practical challenges and gather improvement suggestions.
+            </p>
+            <p>
+                All APIs developed in this project were designed to be consumed by a web-based frontend application, making backend stability, clear data contracts, and performance optimization critical elements of the development process.
+            </p>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-md-12">
+            <h4>Design</h4>
+            <p>
+                The backend system was architected using a microservices approach, with each service exposed via RESTful APIs. The internal code structure followed a clear separation of concerns, organized into Controller–Service–Repository layers to promote maintainability and scalability.
+            </p>
+            <img src="assets/porto-tech/superinventory/superinventory-04.jpg" alt="[GAMBAR MICROSERVICES]" class="rounded-3 mx-auto d-block mb-3">
+            <img src="assets/porto-tech/superinventory/superinventory-05.png" alt="[GAMBAR C-S-R]" class="rounded-3 mx-auto d-block mb-5">
+            <p>
+                The database schema was designed entirely from scratch, collaboratively developed and reviewed in regular meetings with the backend team. While the feature set referenced the legacy system, the new design was aimed at delivering more consistency, scalability, and adaptability across multiple supply chain domains.
+            </p>
+            <p>
+                API documentation was generated and maintained using Swagger, allowing frontend developers and stakeholders to easily reference endpoint specifications and payload structures.
+            </p>
+            <p>
+                In terms of security and authorization, several key mechanisms were implemented:
+                <ul>
+                    <li>JWT (Bearer Tokens) for authenticating and identifying users accessing the APIs</li>
+                    <li>API Keys for secure communication between internal microservices (service invocation)</li>
+                    <li>Hashing and digital signature mechanisms for integrating with third-party/external APIs</li>
+                    <li>SSH Keys for securely accessing cloud-hosted databases</li>
+                    <li>Role-based access control (RBAC) to define and enforce user permissions at the application level</li>
+                </ul>
+            </p>
+            <p>
+                The design emphasized both flexibility and security to ensure smooth system operation across departments and business units with varying operational needs.
+            </p>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-12">
+            <h4>Implementation</h4>
+            <p>
+                The backend development was carried out using the Go programming language, leveraging PostgreSQL and MongoDB as the primary databases. The project was built on top of an in-house framework designed by the internal engineering team, utilizing a variety of Go libraries to support different functionalities.
+            </p>
+            <p>
+                Development tools included:
+                <ul>
+                    <li>Visual Studio Code for code authoring</li>
+                    <li>TablePlus for managing PostgreSQL databases</li>
+                    <li>MongoDB Compass for visualizing and querying MongoDB collections</li>
+                    <li>Swagger/Postman for APIs documentation</li>
+                </ul>
+            </p>
+            <p>
+                As a backend developer, I was involved in the implementation of a wide range of modules, including:
+                <ul>
+                    <li>Product Master Data</li>
+                    <li>Purchase Request</li>
+                    <li>Purchase Order</li>
+                    <li>Sales Order</li>
+                    <li>Delivery Order</li>
+                    <li>Assembly/Manufacturing</li>
+                    <li>and many more</li>
+                </ul>
+            </p>
+            <p>
+                Beyond feature development, I was frequently assigned to resolve bugs across multiple modules, including:
+                <ul>
+                    <li>Debugging and correcting business logic flaws from modules previously handled by team members who had left</li>
+                    <li>Maintaining code consistency and stability across the platform</li>
+                </ul>
+            </p>
+            <p>
+                This rotating responsibility allowed me to gain broad exposure across nearly all modules within the SuperInventory system.
+            </p>
+            <p>
+                The project utilized built-in error-handling capabilities provided by the internal framework. System logging was occasionally reviewed via Google Cloud Platform (GCP) for diagnostics and monitoring. At this stage, the project did not implement automated unit or integration testing, and CI/CD pipelines were managed separately by the DevOps team.
+            </p>
+        </div>
+    </div>
+
+    <!-- My Role As Backend Developer -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card p-md-5 p-3 border-0 bg-secondary">
+                <div class="card-body">
+                    <h3 class="mb-4 pb-3">My Role As Backend Developer</h3>
+                    <p>
+                        As a backend developer in the SuperInventory project, I was responsible for developing, maintaining, and optimizing critical API endpoints that power the company's internal supply chain management system. My contributions spanned across various modules, where I was actively involved not only in implementation but also in system design discussions, database modeling, and codebase restructuring.
+                    </p>
+                    <p>
+                        One of the most technically fulfilling modules I handled was the Product Master, where I implemented a CQRS architecture that separated read operations (using MongoDB) and write operations (using PostgreSQL). This gave me hands-on experience with MongoDB queries and optimized read-heavy workloads. I also successfully integrated a Publisher-Subscriber (Pub/Sub) pattern in Golang, enabling real-time data synchronization between master data and transaction-level records across services.
+                    </p>
+                    <img src="assets/porto-tech/superinventory/superinventory-06.jpg" alt="[GAMBAR PUBSUB]" class="rounded-3 mx-auto d-block my-4">
+                    <p>
+                        Another significant responsibility was the integration of accounting transactions. Since nearly all operations in SuperInventory are linked to accounting (e.g., payables, receivables, journal entries, and cash flow), I was trusted to bridge our platform with the accounting system via secure API invocation and scheduled jobs. I worked with Google Cloud Platform logs to monitor and verify the successful execution of scheduled background processes.
+                    </p>
+                    <p>
+                        I also developed the Assembly (Manufacturing) module from scratch — from process mapping to database design and API development. This feature allows users to combine multiple raw materials into finished goods, which required seamless handling of both stock deduction and product creation logic, including reporting integration.
+                    </p>
+                    <p>
+                        In terms of code quality and collaboration, I played a key role in refactoring and globalizing functions that were previously duplicated across modules. By abstracting shared logic into core functions, the codebase became cleaner and less prone to bugs. This approach significantly improved maintainability and reduced debugging time for the team.
+                    </p>
+                    <p>
+                        I was often assigned to maintain and extend legacy code left by previous developers, particularly the Purchase Order module. The biggest challenge was reverse-engineering undocumented logic and rewriting sections with clear inline comments to ensure readability and long-term maintainability.
+                    </p>
+                    <p>
+                        Beyond coding, I took the initiative to mentor junior backend developers, introducing them to the company's tech stack, Git flow, deployment processes, and backend design principles like Controller–Service–Repository, Pub/Sub, and CQRS.
+                    </p>
+                    <p>
+                        Cross-functional collaboration was also a core part of my role. I worked closely with system analysts to interpret user requirements, DevOps to assess load and performance, and frontend engineers to ensure API integration matched the expected UI behavior. I often helped debug and explain complex backend logic when misalignment occurred.
+                    </p>
+                    <p>
+                        Throughout this project, I honed my ability to convert business requirements into scalable backend logic, improve system performance, and maintain clarity in code for both myself and my teammates. In the future, I hope to explore backend integrations with Google Services, WebSockets, Payment Gateways, and even AI-based tools to further enhance user productivity and experience.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-md-8">
+            <h4>Testing</h4>
+            <p>
+                Initial testing was performed directly by me as the backend developer to ensure that each API endpoint was free from syntax errors and followed the correct business logic flow. This step was essential before handing over features for broader testing.
+            </p>
+            <p>
+                Further testing was conducted by the frontend team and system analysts, who carried out:
+                <ul>
+                    <li>Manual testing during the development phase to verify API integration with frontend components</li>
+                    <li>User Acceptance Testing (UAT) just before the release to production, ensuring that the system met the business requirements and was usable by real users</li>
+                </ul>
+            </p>
+            <p>
+                Feedback was typically communicated in the form of written notes and annotated screenshots, which highlighted the status of each tested endpoint—whether it functioned correctly or still contained bugs. I responded promptly to these reports by debugging, making adjustments to the business logic, or improving the data structure if necessary.
+            </p>
+        </div>
+        <div class="col-md-4">
+            <img src="assets/porto-tech/superinventory/superinventory-07.jpg" alt="" class="rounded-3 mx-auto d-block">
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-12">
+            <h4>Deployment / Release</h4>
+            <p>
+                The deployment process for the backend services was streamlined and efficient, thanks to the support of a dedicated DevOps team. My primary responsibility in this phase was to create and tag the final commit, signaling that the feature or fix was ready for deployment.
+            </p>
+            <p>
+                The backend was deployed to Google Cloud Platform (GCP), utilizing CI/CD pipelines integrated with Bitbucket for automated build and release processes. This workflow significantly reduced deployment friction and allowed the development team to focus on feature delivery and quality improvements.
+            </p>
+            <img src="assets/porto-tech/superinventory/superinventory-08.jpg" alt="" class="rounded-3 mx-auto d-block mb-3">
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-md-12">
+            <h4>Maintenance</h4>
+            <p>
+                I remain actively involved in the maintenance of the system, particularly in:
+                <ul>
+                    <li>Bug fixing, especially for issues that emerge as the business logic becomes increasingly complex over time</li>
+                    <li>Feature enhancements and minor upgrades requested by users and business units to improve usability or adapt to operational changes</li>
+                </ul>
+            </p> 
+            <p>
+                Ongoing maintenance ensures that the system remains robust, responsive to evolving needs, and aligned with business goals.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+<!-- Explore More Projects  -->
+<section class="container py-5 mt-2 mt-md-4 mt-lg-5 mb-xl-2">
+    <!--
+    <h2 class="h1 text-center pt-2 pt-md-3 pb-4 mb-2 mb-lg-3">Explore More Projects</h2>
+
+    <div class="row">
+    <div class="col-md-4">
+        <div class="card card-portfolio">
+        <div class="card-img">
+            <img src="assets/porto-design/porto-design-labterpadu.jpg" alt="Image">
+        </div>
+        <div class="card-body">
+            <h3 class="h4 mb-2">
+            <a href="#/portfolio-tech/" data-scroll class="stretched-link">Lab Terpadu USU Brand Design</a>
+            </h3>
+            <div class="card-portfolio-meta">
+            <span class="text-muted">Brand Design / Social Media / Printing</span>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card card-portfolio">
+        <div class="card-img">
+            <img src="assets/porto-design/porto-design-arcard.jpg" alt="Image">
+        </div>
+        <div class="card-body">
+            <h3 class="h4 mb-2">
+            <a href="#/portfolio-tech/" data-scroll class="stretched-link">AR Card Techtonic Brand Design</a>
+            </h3>
+            <div class="card-portfolio-meta">
+            <span class="text-muted">Brand Design / Social Media / Printing</span>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card card-portfolio">
+        <div class="card-img">
+            <img src="assets/porto-design/porto-design-iccai.jpg" alt="Image">
+        </div>
+        <div class="card-body">
+            <h3 class="h4 mb-2">
+            <a href="#/portfolio-tech/" data-scroll class="stretched-link">ICCAI 2022 Brand Design</a>
+            </h3>
+            <div class="card-portfolio-meta">
+            <span class="text-muted">Brand Design / Flyer / Conference</span>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    </div> -->
+
+</section>
