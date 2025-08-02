@@ -1,0 +1,162 @@
+<!-- Breadcrumb -->
+<nav class="container py-4 mb-lg-2 mt-5" aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0 mt-4">
+        <li class="breadcrumb-item">
+            <a href="#/" data-scroll><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="#/portfolio-tech" data-scroll>Tech/IT Portfolio</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Vehicle Inspection System</li>
+    </ol>
+</nav>
+
+
+<!-- Page title -->
+<section class="container pb-4 mb-2 mb-lg-3">
+    <h1>Vehicle Inspection System</h1>
+    <p class="text-muted mb-0">ASP .NET MVC / C# / SQL Server / Bootstrap / JQuery</p>
+</section>
+
+
+<!-- Hero image (Parallax) -->
+<section class="jarallax" data-jarallax data-speed="0.4">
+    <div class="jarallax-img" style="background-image: url('assets/porto-tech/inspeksi/inspeksi-01.jpg');"></div>
+    <div class="d-none d-xxl-block" style="height: 800px;"></div>
+    <div class="d-none d-lg-block d-xxl-none" style="height: 600px;"></div>
+    <div class="d-none d-md-block d-lg-none" style="height: 450px;"></div>
+    <div class="d-md-none" style="height: 400px;"></div>
+</section>
+
+<!-- About project -->
+<section class="container py-5 my-1 my-md-4 my-lg-5">
+    <div class="row">
+        <div class="col-lg-7">
+            <div class="pe-lg-4 me-lg-3 pe-xl-0 me-xl-0">
+                <h2 class="h1 mb-4">Overview</h2>
+                <p class="fs-lg mb-0">
+                    <b>The Vehicle Inspection System (Inspeksi Armada)</b> is a standalone application within the company's logistics ecosystem, specifically developed to manage routine vehicle inspections before and after each trip. When a vehicle is found to have issues, it is directed to the company's workshop for repairs. The inspection process is carried out by on-site inspectors using tablets, so the system is designed to be user-friendly on touchscreen devices.
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-5 col-xl-4 offset-xl-1 border-start-lg">
+            <div class="ps-lg-4 ms-lg-3">
+                <h3 class="h5 d-flex align-items-center">
+                    <i class="bx bx-user text-primary fs-4 me-2"></i>Role
+                </h3>
+                <p class="pb-4 mb-0 mb-lg-3">Fullstack Developer</p>
+                <h3 class="h5 d-flex align-items-center">
+                    <i class="bx bx-bong text-primary fs-4 me-2"></i>Tech Stack
+                </h3>
+                <p class="mb-0">
+                    ASP.NET MVC (C#)<br>
+                    Microsoft SQL Server<br>
+                    Bootstrap <br>
+                    JQuery
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Details  -->
+<section class="container my-1 my-md-4 my-lg-5">
+    <div class="row mb-5">
+        <div class="col-md-12">
+            <h4>Planning</h4>
+            <p>
+                The system had been in operation for quite some time, but in Q3 2023, management initiated a major system overhaul. The operational team provided a revised inspection form, which became the foundation for further development. The primary objective was to support the digital transformation of the vehicle inspection process across all company branches in Indonesia, making it more structured, user-friendly, and compliant with ISO 9001:2015 standards.
+            </p>
+            <p>
+                The system scope includes managing inspection criteria, recording inspection results, generating reports, and handling user account access. However, it does not yet support IoT integration, real-time notifications, or mobile app deployment—it is available solely as a web application optimized for tablet use. This project involved myself as a fullstack developer, working alongside a system analyst, one supervisor, and the management team for evaluation and approval.
+            </p>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-12">
+            <h4>Analysis</h4>
+            <p>
+                The legacy system had several limitations: a rigid input form that couldn't adapt to different types of vehicle body configurations, the absence of indicator remarks, lack of compliance with ISO 9001:2015, and an outdated interface design.
+            </p>
+            <p>
+                There are two primary user roles in the system:
+                <ul>
+                    <li>Inspectors, who are responsible for conducting inspections every time a vehicle enters or leaves the depot.</li>
+                    <li>Management, who define the inspection forms and receive summary reports from all branches.</li>
+                </ul>
+            </p>
+            <p>
+                Management's specific requests included:
+                <ul>
+                    <li>Updating the inspection form to comply with ISO 9001:2015</li>
+                    <li>Implementing digital signatures</li>
+                    <li>Providing more comprehensive reporting features</li>
+                    <li>Implementing role based access control (RBAC) and branch access</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-12">
+            <h4>Design</h4>
+            <p>
+                I began the redesign process by rebuilding the database schema based on user needs and the new ISO-compliant inspection form. A modern admin template was selected to improve usability. Given the simplicity of the system, I skipped the mockup and flowcharting stages. However, I gave special attention to UI/UX design to ensure the interface was fully optimized for tablet displays used in the field.
+            </p>
+        </div>
+        <div class="col-12">
+            <img src="assets/porto-tech/inspeksi/inspeksi-02.png" alt="[GAMBAR TAB INSPEKSI]" class="rounded-3 mt-3">
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-12">
+            <h4>Implementation</h4>
+            <p>
+                The system was built using the ASP.NET MVC framework with C#, connected to a Microsoft SQL Server database. The frontend utilized Bootstrap 4 and jQuery 3. The primary development tools were Visual Studio 2022, Visual Studio Code, and TablePlus.
+            </p>
+            <p>
+                As the sole developer on the project, I handled the end-to-end module development process, which included:
+                <ul>
+                    <li>Designing and creating new database tables</li>
+                    <li>Translating user needs into CRUD features using the MVC pattern and LINQ query builder</li>
+                    <li>Developing responsive UI components</li>
+                    <li>Integrating company's internal SSO login via API</li>
+                    <li>Compressing photo attachments to reduce storage usage</li>
+                    <li>Implementing digital signature features for inspectors and drivers</li>
+                    <li>Adding validation rules that align with operational logistic system</li>
+                    <li>Documenting complex code segments for better maintainability</li>
+                    <li>Coordinating closely with the system analyst and supervisor to align outputs with user expectations</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-md-12">
+            <h4>Testing</h4>
+            <p>
+                Manual testing was conducted by the system analyst after each module was developed. Any bugs found were fixed immediately. Once all features were verified, we conducted a demo session for management, incorporated their feedback, and implemented minor updates accordingly.
+            </p>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-12">
+            <h4>Deployment / Release</h4>
+            <p>
+                The system was gradually rolled out across company branches starting in early September 2023. Prior to the rollout, I handled the deployment process by publishing the project through Visual Studio 2022 and manually transferring the output files to the on-premise IIS server using Remote Desktop Connection. The domain configuration and hosting environment had already been provisioned by the company. After the system was up and running, the management team conducted training and socialization sessions with inspectors in each branch to ensure proper usage and smooth adoption.
+            </p>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-12">
+            <h4>Maintenance</h4>
+            <p>
+                I remain actively involved in system maintenance, which primarily includes fixing post-launch bugs and handling minor updates. My focus has been to ensure that vehicle inspections continue to run reliably and efficiently.
+            </p> 
+        </div>
+    </div>
+</section>
